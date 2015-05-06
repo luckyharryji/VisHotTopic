@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SystemG UI">
+    <meta name="author" content="xiangyu">
+
+    <title>Term trend analysis</title>
+
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ui.css" rel="stylesheet">
+    <script src="lib/jQuery/jquery.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Term trend for a topic</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-18 col-sm-12">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab">Trend analysis</a></li>
+            </ul>
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <div id="myTabContent" class="tab-content">
+                <div id="toolbar" class="navbar navbar-default" style="margin-bottom:0px;">
+                    <p class="navbar-text pull-left">Topic:</p>
+
+                    <div class="btn-group pull-left">
+                        <button id="dataset" type="button" class="btn btn-default navbar-btn">select topic</button>
+                        <button type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a id="dataset" href="#">data mining</a></li>
+                            <li><a id="dataset" href="#">machine learning</a></li>
+                            <li><a id="dataset" href="#">big data</a></li>
+                            <li><a id="dataset" href="#">deep learning</a></li>
+                            <li><a id="dataset" href="#">online learning</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade active in">
+                    <!-- visualization -->
+                    <div id="content1"
+                         style="width:100%;height:615px;padding:5px;background-color:grey;border-radius:5px;">
+                        <div id="viscomp"
+                             style="position:relative;width:100%;height:600px;border-radius:5px;background-color:white;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/chooseTopic.js"></script>
+        <script src="lib/d3/d3.v3.min.js" charset="utf-8"></script>
+        <script src="lib/highCharts/highcharts.js"></script>
+        <script src="js/trendShow.js" charset="utf-8"></script>
+    </div>
+</div>
+</body>
+</html>
